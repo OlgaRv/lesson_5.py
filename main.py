@@ -22,6 +22,7 @@ class TaskManager:
                 return
         print(f"Задача '{description}' не найдена")
 
+# функция написана с помощью ИИ
     def get_current_tasks(self):
         current_tasks = [task for task in self.tasks if not task.status]
         if current_tasks:
