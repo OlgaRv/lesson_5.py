@@ -7,8 +7,8 @@
 #  1. Создай класс Store:
 #  -Атрибуты класса:
 #  name: название магазина.
-#  address: адрес магазина.#
-# items: словарь, где ключ - название товара, а значение - его цена. Например, {'apples': 0.5, 'bananas': 0.75}.
+#  address: адрес магазина.
+#  items: словарь, где ключ - название товара, а значение - его цена. Например, {'apples': 0.5, 'bananas': 0.75}.
 #
 # Методы класса:
 #  __init__ - конструктор, который инициализирует название и адрес, а также пустой словарь для items`.
@@ -29,12 +29,13 @@ class Store:
 
     def remove_item(self, item_name):
         if item_name in self.items:
-            del self.items[item_name]
+            self.items.pop(item_name)
             print(f"Товар '{item_name}' удален из ассортимента магазина '{self.name}'")
         else:
             print(f"Товар '{item_name}' не найден в ассортименте магазина '{self.name}'")
 
     def get_item_price(self, item_name):
+        print(f"Стоимость товара {item_name} равна")
         return self.items.get(item_name, None)
 
     def update_item_price(self, item_name, new_price):
