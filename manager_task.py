@@ -8,7 +8,7 @@ class Task():
         self.description = description
         self.deadline = deadline
         self.status = False
-class TaskManager:
+class TaskManager():
     def __init__(self):
         self.tasks = []
 

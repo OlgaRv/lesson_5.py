@@ -63,3 +63,4 @@ store1.remove_item("Бананы")
 
 print(store1.get_item_price("Яблоки"))
 print(store1.get_item_price("Бананы"))
+
